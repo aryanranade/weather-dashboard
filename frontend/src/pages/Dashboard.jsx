@@ -21,6 +21,7 @@ const Dashboard = () => {
     if (user) {
       loadFavoriteCities();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
   // Determine if it's day or night based on current weather
@@ -30,7 +31,7 @@ const Dashboard = () => {
       const currentTime = Math.floor(now.getTime() / 1000);
       const sunrise = currentWeather.sunrise;
       const sunset = currentWeather.sunset;
-      
+
       // Check if current time is between sunrise and sunset (day) or not (night)
       const night = currentTime < sunrise || currentTime > sunset;
       setIsNight(night);
@@ -49,7 +50,7 @@ const Dashboard = () => {
   const handleWeatherData = (weatherData) => {
     setCurrentWeather(weatherData);
     setError('');
-    
+
     // Check if current city is in favourites
     const isCityFavorite = favoriteCities.includes(weatherData.cityName);
     setIsFavorite(isCityFavorite);
@@ -89,7 +90,7 @@ const Dashboard = () => {
   const handleWeatherSelect = (weatherData) => {
     setCurrentWeather(weatherData);
     setError('');
-    
+
     // Check if selected city is in favourites
     const isCityFavorite = favoriteCities.includes(weatherData.cityName);
     setIsFavorite(isCityFavorite);
@@ -116,7 +117,7 @@ const Dashboard = () => {
             const hasGlow = (seed * 30) % 100 < 25; // ~25% stars have glow
             const starColor = isYellow ? '#FFE4B5' : '#FFFFFF';
             const glowSize = size * (2 + ((seed * 20) % 10));
-            
+
             return (
               <div
                 key={i}
@@ -167,72 +168,72 @@ const Dashboard = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-slate-700 via-slate-800 to-slate-900"></div>
         </div>
       )}
-      
+
       <div className="relative z-10">
         <Navbar onLogout={handleLogout} />
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="space-y-8"
-        >
-          {/* Search Section */}
-          <SearchBar 
-            onWeatherData={handleWeatherData}
-            onError={handleError}
-          />
-
-          {/* Error Message */}
-          {error && (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="bg-red-900/50 border border-red-700/50 text-red-200 px-4 py-3 rounded-lg"
-            >
-              {error}
-            </motion.div>
-          )}
-
-          {/* Current Weather */}
-          {currentWeather && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <WeatherCard
-                weather={currentWeather}
-                onAddToFavorites={handleAddToFavorites}
-                onRemoveFromFavorites={handleRemoveFromFavorites}
-                isFavorite={isFavorite}
-                loading={favoritesLoading}
-              />
-            </motion.div>
-          )}
-
-          {/* Forecast */}
-          {currentWeather?.forecast && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <ForecastCard forecast={currentWeather.forecast} />
-            </motion.div>
-          )}
-
-          {/* Favourites */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="space-y-8"
           >
-            <FavoritesList onWeatherSelect={handleWeatherSelect} />
+            {/* Search Section */}
+            <SearchBar
+              onWeatherData={handleWeatherData}
+              onError={handleError}
+            />
+
+            {/* Error Message */}
+            {error && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="bg-red-900/50 border border-red-700/50 text-red-200 px-4 py-3 rounded-lg"
+              >
+                {error}
+              </motion.div>
+            )}
+
+            {/* Current Weather */}
+            {currentWeather && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                <WeatherCard
+                  weather={currentWeather}
+                  onAddToFavorites={handleAddToFavorites}
+                  onRemoveFromFavorites={handleRemoveFromFavorites}
+                  isFavorite={isFavorite}
+                  loading={favoritesLoading}
+                />
+              </motion.div>
+            )}
+
+            {/* Forecast */}
+            {currentWeather?.forecast && (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <ForecastCard forecast={currentWeather.forecast} />
+              </motion.div>
+            )}
+
+            {/* Favourites */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              <FavoritesList onWeatherSelect={handleWeatherSelect} />
+            </motion.div>
           </motion.div>
-        </motion.div>
-      </div>
+        </div>
       </div>
     </div>
   );

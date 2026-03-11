@@ -14,6 +14,7 @@ const FavoritesList = ({ onWeatherSelect }) => {
     if (user) {
       loadFavorites();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
 
   const loadFavorites = async () => {
@@ -21,7 +22,7 @@ const FavoritesList = ({ onWeatherSelect }) => {
       setLoading(true);
       const cities = await favoritesService.getFavoriteCities(user.id);
       setFavorites(cities);
-      
+
       // Load weather for all favourite cities
       if (cities.length > 0) {
         const weatherData = await favoritesService.getFavoriteCitiesWeather(user.id);
