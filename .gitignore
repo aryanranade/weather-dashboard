@@ -20,10 +20,6 @@ frontend/yarn-error.log*
 # Java/Maven (Backend)
 backend/target/
 backend/*.log
-backend/.mvn/
-backend/mvnw
-backend/mvnw.cmd
-backend/help.md
 
 # Secrets and Local Config
 backend/src/main/resources/application.properties

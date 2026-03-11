@@ -4,6 +4,7 @@ COPY mvnw .
 COPY .mvn .mvn
 COPY pom.xml .
 COPY src src
+RUN cp src/main/resources/application.properties.example src/main/resources/application.properties
 
 # Make maven wrapper executable
 RUN chmod +x mvnw
