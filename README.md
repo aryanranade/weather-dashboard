@@ -1,24 +1,17 @@
-<h1 align="center">🌤️ Weather Dashboard</h1>
+# 📋 Weather Dashboard
 
-<p align="center">
-  A modern, responsive, full-stack weather application with user authentication, personalized favorite cities, and dynamic day/night themes. Built with a React frontend and a Spring Boot (Java) backend.
+**[🟢 View Live Deployment](https://weather-dashboard-omega-mocha.vercel.app)**
+
+<p align="left">
+  <img src="https://img.shields.io/badge/REACT-20232A?style=flat-square&logo=react&logoColor=61DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/TAILWIND%20CSS-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/SPRING%20BOOT-F2F4F9?style=flat-square&logo=spring-boot&logoColor=black" alt="Spring Boot" />
+  <img src="https://img.shields.io/badge/POSTGRESQL-316192?style=flat-square&logo=postgresql&logoColor=white" alt="PostgreSQL" />
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-  <img src="https://img.shields.io/badge/Spring_Boot-F2F4F9?style=for-the-badge&logo=spring-boot" alt="Spring Boot" />
-  <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-  <img src="https://img.shields.io/badge/Render-%46E3B7?style=for-the-badge&logo=render&logoColor=white" alt="Render" />
-  <img src="https://img.shields.io/badge/Vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
-</p>
+A modern, responsive, full-stack weather application designed to easily track weather conditions and favorite cities. Built with a React frontend and a robust Spring Boot backend, emphasizing clean architecture, stateless JWT authentication, and seamless fluid UI animations.
 
 ---
-
-## 🚀 Live Demo
-
-**Frontend (Vercel):** [https://weather-dashboard-omega-mocha.vercel.app](https://weather-dashboard-omega-mocha.vercel.app)  
-**Backend API (Render):** Deployed live via Docker containers.
 
 ## ✨ Features
 
