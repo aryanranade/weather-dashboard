@@ -17,7 +17,7 @@
 
 ## 🚀 Live Demo
 
-**Frontend (Vercel):** [https://weather-dashboard-aryanranade.vercel.app](https://weather-dashboard-aryanranade.vercel.app) *(Replace this with your actual Vercel URL!)*  
+**Frontend (Vercel):** [https://weather-dashboard-omega-mocha.vercel.app](https://weather-dashboard-omega-mocha.vercel.app)  
 **Backend API (Render):** Deployed live via Docker containers.
 
 ## ✨ Features
