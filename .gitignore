@@ -22,4 +22,3 @@ backend/target/
 backend/*.log
 
 # Secrets and Local Config
-backend/src/main/resources/application.properties
