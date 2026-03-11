@@ -7,7 +7,7 @@
   <img src="https://img.shields.io/badge/Vercel-%23000000.svg?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
 </div>
 
-<h1 align="center">🌤️ Full-Stack Weather Dashboard</h1>
+<h1 align="center">🌤️ Weather Dashboard</h1>
 
 <p align="center">
   A modern, responsive, full-stack weather application with user authentication, personalized favorite cities, and dynamic day/night themes. Built with a React frontend and a Spring Boot (Java) backend.
